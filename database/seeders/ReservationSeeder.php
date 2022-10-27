@@ -16,10 +16,17 @@ class ReservationSeeder extends Seeder
     public function run()
     {
         $reservatio = new Reservation();
-        $reservatio->id_client = "1";
-                //Example -> 2006-01-20
+        $reservatio->client_id = 1;
+        //Example -> 2006-01-20
         $reservatio->date_reservation = "2022-10-26";
-        $reservatio->room_type = "2 beds";
+        $reservatio->price = 12.5;
+        $reservatio->save();
+
+        $reservatio = new Reservation();
+        $reservatio->client_id = 2;
+        //Example -> 2006-01-20
+        $reservatio->date_reservation = "2022-10-27";
+        $reservatio->price = 20;
         $reservatio->save();
     }
 }
