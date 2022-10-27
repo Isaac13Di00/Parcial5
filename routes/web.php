@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UserController;
 use App\Models\Client;
+use App\Models\Reservation;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 /*
@@ -35,3 +37,6 @@ Route::get('sum/{num1}/{num2}/{num3?}', function ($num1, $num2, $num3=0) {
 
 Route::get('clients/', [ ClientController::class, 'index' ]);
 Route::get('clients/{id}', [ ClientController::class, 'show' ]);
+
+Route::get('reservations/', [ ReservationController::class, 'index' ]);
+Route::get('reservations/{id}', [ ReservationController::class, 'show' ]);
