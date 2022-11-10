@@ -25,16 +25,6 @@ Route::get('users/create', [ UserController::class, 'create' ]);
 Route::get('users/{id}', [ UserController::class, 'show' ]);
 Route::post('users/', [ UserController::class, 'store' ]);
 
-Route::get('saludo', function () {
-    echo 'hola';
-});
-Route::get('saludo/{name}', function ($name) {
-    echo 'hola ' . $name;
-});
-Route::get('sum/{num1}/{num2}/{num3?}', function ($num1, $num2, $num3=0) {
-    echo $num1 + $num2 + $num3;
-});
-
 Route::get('clients/', [ ClientController::class, 'index' ]);
 Route::get('clients/{id}', [ ClientController::class, 'show' ]);
 
@@ -44,3 +34,7 @@ Route::get('reservations/{id}', [ ReservationController::class, 'show' ]);
 Route::get('login/', function(){
     return view('login');
 })->name('login');
+
+Route::get('home/', function(){
+    return view('home');
+})->name('home');

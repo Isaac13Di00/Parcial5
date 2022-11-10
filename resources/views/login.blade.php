@@ -11,7 +11,6 @@
         <h1>
             @auth
                 {{ Auth::User()->name }}
-                hola
             @endauth
         </h1>
         <div>
